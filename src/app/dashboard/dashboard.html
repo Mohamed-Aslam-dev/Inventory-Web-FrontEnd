@@ -1,0 +1,31 @@
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<div class="full-bg d-flex align-items-center justify-content-center">
+  <div class="content-box text-center shadow-lg">
+    <h1 class="gradient-text mb-4">📦 Inventory Dashboard</h1>
+    <p class="text-muted mb-5">Choose an action to proceed</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5 mb-3">
+        <div class="card action-card" (click)="navigateTo('add-item')">
+          <div class="card-body">
+            <h4>➕ Add Items Data</h4>
+            <p>Insert new products into inventory</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 mb-3">
+        <div class="card action-card" (click)="navigateTo('note-order')">
+          <div class="card-body">
+            <h4>📝 Note A Order</h4>
+            <p>Create or manage order entries</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->

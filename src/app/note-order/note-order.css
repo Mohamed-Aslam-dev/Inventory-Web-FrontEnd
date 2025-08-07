@@ -1,0 +1,64 @@
+body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  min-height: 100vh;
+  padding-top: 20px;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.custom-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: #333;
+  width: 100%;
+}
+
+h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+.table td:hover {
+  background-color: #f5f5f5;
+}
+
+tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+input[type='number'] {
+  max-width: 100px;
+}
+
+.pdf-button {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  border: 2px solid black;
+  color: black;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.pdf-button:hover {
+  background: linear-gradient(to right, #43e97b, #38f9d7);
+  transform: scale(1.05);
+}
+
+.pdf-button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
