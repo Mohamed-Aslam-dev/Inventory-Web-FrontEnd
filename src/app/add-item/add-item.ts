@@ -23,7 +23,7 @@ export class AddItem {
       companyName: this.companyName
     };
 
-    this.http.post('http://localhost:8080/inventory/create-csv', payload, { responseType: 'text' })
+    this.http.post('https://manageinventoryapp.onrender.com/inventory/create-csv', payload, { responseType: 'text' })
       .subscribe({
         next: (res) => {
           this.responseMsg = res;
@@ -39,7 +39,7 @@ export class AddItem {
   csvFiles: string[]=[];
 
   ngOnInit(){
-    this.http.get<string[]>('http://localhost:8080/inventory/list-csv-files')
+    this.http.get<string[]>('https://manageinventoryapp.onrender.com/inventory/list-csv-files')
       .subscribe({
         next: (data)=>{
           this.csvFiles = data;  
