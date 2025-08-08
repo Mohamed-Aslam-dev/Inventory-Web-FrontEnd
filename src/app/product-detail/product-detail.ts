@@ -22,7 +22,7 @@ export class ProductDetail {
   }
 
   onSubmit() {
-    this.http.post('http://localhost:8080/inventory/add-row', {
+    this.http.post('https://manageinventoryapp.onrender.com/inventory/add-row', {
     companyName: this.companyName,
     productName: this.productName
   }, { responseType: 'text' }).subscribe(

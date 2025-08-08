@@ -17,7 +17,7 @@ export class NoteOrder {
   csvFiles: string[]=[];
 
   ngOnInit(){
-    this.http.get<string[]>('http://localhost:8080/inventory/list-csv-files')
+    this.http.get<string[]>('https://manageinventoryapp.onrender.com/inventory/list-csv-files')
       .subscribe({
         next: (data)=>{
           this.csvFiles = data;  
@@ -33,7 +33,7 @@ export class NoteOrder {
 loadCSV(fileName: string) {
   this.fileName = fileName;
   this.http
-    .get<string[]>(`http://localhost:8080/inventory/products/${fileName}`)
+    .get<string[]>(`https://manageinventoryapp.onrender.com/inventory/products/${fileName}`)
     .subscribe((data) => {
       this.products = data.map((name) => ({
         name: name,
@@ -60,7 +60,7 @@ proceedToPDF() {
       }))
   };
 
-  this.http.post('http://localhost:8080/inventory/generate-pdf', payload, {
+  this.http.post('https://manageinventoryapp.onrender.com/inventory/generate-pdf', payload, {
     responseType: 'blob'
   }).subscribe({
     next: (res: Blob) => {
