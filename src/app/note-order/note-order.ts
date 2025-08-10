@@ -59,7 +59,7 @@ proceedToPDF() {
       .map(p => ({
         productName: p.name,
         productQuantity: p.qty,
-        productUnit: p.units
+        productUnit: p.unit
       }))
   };
 
