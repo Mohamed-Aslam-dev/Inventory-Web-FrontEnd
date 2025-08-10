@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 })
 export class NoteOrder {
 
+  units = ["Nos", "Kgs", "Case"];
+
   constructor(private http: HttpClient, private router: Router) {}
 
   csvFiles: string[]=[];
@@ -37,7 +39,8 @@ loadCSV(fileName: string) {
     .subscribe((data) => {
       this.products = data.map((name) => ({
         name: name,
-        qty: 0
+        qty: 0,
+        unit: this.units[0]
       }));
     });
 }
@@ -56,7 +59,7 @@ proceedToPDF() {
       .map(p => ({
         productName: p.name,
         productQuantity: p.qty,
-        
+        productUnit: p.units
       }))
   };
 
@@ -80,7 +83,7 @@ proceedToPDF() {
   });
 }
 
-units = ["Nos", "Kgs", "Case"];
+
 
 
 }
