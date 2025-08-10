@@ -80,5 +80,7 @@ proceedToPDF() {
   });
 }
 
+units = ["Nos", "Kgs", "Case"];
+
 
 }
